@@ -26,7 +26,7 @@ data Table = Table { table_headers :: [String]
                    }
            deriving (Show, Eq)
 
-data Background = Background [Step] deriving (Show, Eq)
+newtype Background = Background [Step] deriving (Show, Eq)
 
 data Step = Given { step_text :: StepText }
           | Then { step_text :: StepText }
